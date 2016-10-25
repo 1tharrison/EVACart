@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EVACart.Data.EF.EvacArtistsMetaData" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACggAEAAACAAhAAIEAAECAgAAAAAABAAAAAAJFAAAAg=</HashCode>
+      <FileName>MetaData\EvMetaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EVACart.Data.EF.EvacArtists" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACggAEAAACAAhAAIECAECAgAEgAAABAAAAAAJFAAAAg=</HashCode>
+      <FileName>MetaData\EvMetaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EVACart.Data.EF.DepartmentMetaData" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAggAAAEAAAAAQCAAAAAAAAAAAAAhAAAAA=</HashCode>
+      <FileName>MetaData\EvMetaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EVACart.Data.EF.Department" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAggAAAEAAAAAQCYiAAABAAAAAAAhAAAAA=</HashCode>
+      <FileName>MetaData\EvMetaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EVACart.Data.EF.StaffMetadeta" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACggAEAAACAAhEAIEAAECAgAAAAAABAAAAAAJkAAAAg=</HashCode>
+      <FileName>MetaData\EvMetaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EVACart.Data.EF.Staff" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACggAEAAACAAhEAIECAECAgAEAAAABAAAAAAJgAAAAg=</HashCode>
+      <FileName>MetaData\EvMetaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EVACart.Data.EF.GalleryMetaData" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAgAAAAAAkCAQAAIAAAAAAAAAAJBAAAAA=</HashCode>
+      <FileName>MetaData\EvMetaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EVACart.Data.EF.Gallery" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAgAAIAAAkCAQAAoAAAAAAAAAAJBAAAAA=</HashCode>
+      <FileName>MetaData\EvMetaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

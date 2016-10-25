@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- MAIN -->
+<div class="l-main">
+    <div class="l-main-h">
+
+        <!-- page: HOME -->
+        <section id="home" class="l-section">
+
+            <div id="parallax_subsection_0" class="l-subsection color_dark with_parallax" style="background-image:url(Content/Images/img/placeholder/1200x800.jpg);">
+                <div class="l-subsection-h">
+                    <a class="l-subsection-hh g-html i-cf" />
+                    <h1 class="home-heading">
+                        <span class="home-heading-line bold">endowment for veterans art campaign</span>
+                    </h1>
+                    <a class="g-btn type_primary size_big" style="margin:30px; padding-left:32px; padding-right:32px;" @Html.ActionLink("Company Philosophy", "Products", "Home")</a>
+                    @*<span>Company Philosophy</span>*@
+                    @*<a href="~/Views/Home/Products.cshtml">~/Views/Home/Products.cshtml</a>*@
+
+                    <a class="g-btn type_primary size_big" style="margin:30px; padding-left:32px; padding-right:32px;" @Html.ActionLink("Departments", "index", "Departments")</a>
+                    @*<span>Gallery/Leasing Services</span>*@
+
+
+                    <a class="g-btn type_primary size_big" style="margin:30px; padding-left:32px; padding-right:32px;" @Html.ActionLink("Artist Submissions", "Index", "EvacArtists")</a>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+</div>
+
+<div class="l-footer">
+    <div class="l-footer-h">
+        <!-- subfooter: top -->
+        <div class="l-subfooter at_top">
+            <div class="l-subfooter-h">
+
+
+                <div class="one-third">
+                    <div class="widget">
+
+                        <h5>Contact Info</h5>
+                        <div class="w-contacts">
+                            <div class="w-contacts-h">
+                                <div class="w-contacts-list">
+                                    <div class="w-contacts-item">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span class="w-contacts-item-value">4314 Oak St, Kansas City, MO 64111, United States</span>
+                                    </div>
+
+                                    <div class="w-contacts-item">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="w-contacts-item-value"><a href="mailto:info@evacart.com">info@evacart.com</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- subfooter: bottom -->
+    <div class="l-subfooter at_bottom">
+        <div class="l-subfooter-h i-cf">
+            <div class="w-copyright">© 2016 EVAC. All rights reserved</div>
+
+        </div>
+    </div>
+</div>

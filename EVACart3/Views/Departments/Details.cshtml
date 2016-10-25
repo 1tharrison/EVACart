@@ -1,0 +1,52 @@
+﻿@model EVACart.Data.EF.Department
+
+    @{
+        ViewBag.Title = "Details";
+    }
+
+    <h2>Details</h2>
+
+    <div>
+        <h4>Evac Departments</h4>
+        <hr />
+
+        <div class="l-subsection">
+            <div class="l-subsection-h">
+                <div class="l-subsection-hh g-html i-cf">
+
+                    <div class="w-form contacts_form text-danger">
+                        <div class="w-form-h contacts_form_form text-danger" style="color:black">
+
+
+
+                            @Html.DisplayNameFor(model => model.Name)
+
+
+                            @Html.DisplayFor(model => model.Name)
+
+                            @Html.DisplayNameFor(model => model.BoardingAvailable)
+
+                            @Html.DisplayFor(model => model.BoardingAvailable)
+
+                            @Html.DisplayNameFor(model => model.Description)
+
+                            @Html.DisplayFor(model => model.Description)
+
+                            @Html.DisplayNameFor(model => model.Image)
+
+                            @Html.DisplayFor(model => model.Image)
+
+                            @Html.DisplayNameFor(model => model.IsActive)
+
+                            @Html.DisplayFor(model => model.IsActive)
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
