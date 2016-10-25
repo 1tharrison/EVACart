@@ -1,0 +1,62 @@
+﻿@model IEnumerable<EVACart.Data.EF.Department>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>Evac Departments</h4>
+    <hr />
+    @if (User.IsInRole("Admin"))
+    {
+        <p>
+            @Html.ActionLink("Add a New Department", "Create")
+        </p>
+    }
+    @foreach (var item in Model)
+    {
+        <div class="l-subsection">
+            <div class="l-subsection-h">
+                <div class="l-subsection-hh g-html i-cf">
+
+                    <div class="w-form contacts_form text-danger">
+                        <div class="w-form-h contacts_form_form text-danger" style="color:black">
+
+
+                            @if (item.IsActive == true)
+                            {
+                                <strong>
+                                    @Html.DisplayFor(modelItem => item.Name, item.Name)
+                                </strong>
+                            }
+
+                            @if (item.IsActive == false)
+                            {
+                                <strong style="color:red">
+                                    @Html.DisplayFor(modelItem => item.Name, item.Name)
+                                </strong>
+                            }
+                            <br />
+                            <img class="largeData1-image" src="@Url.Content("~/Content/Images/DeptImages/" + item.Image)" alt="@Url.Content("~/Content/Images/DeptImages/noImage.png")" />
+                            @*@Html.DisplayNameFor(model => model.IsActive)
+                                @Html.DisplayFor(modelItem => item.IsActive)
+                                <br/>
+                                @Html.DisplayNameFor(model => model.DepartmentID)
+                                @Html.DisplayFor(modelItem => item.DepartmentID)*@
+                            <div class="buttons" style="margin-left:45px">
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    @*@Html.ActionLink("Edit", "Edit", new {  id = item.ArtistID }) @:|
+                                        @Html.ActionLink("Details", "Details", new { id = item.ArtistID})@:|
+                                        @Html.ActionLink("Change Status", "Delete", new { id = item.ArtistID})*@
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    }
+</div>

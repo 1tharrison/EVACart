@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30C17C44-95EB-4E7E-B56C-2C31A29F5A5B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EVACart3</RootNamespace>
+    <AssemblyName>EVACart3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EvacArtistsController.cs" />
+    <Compile Include="Controllers\ContactViewModel.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RolesAdminController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
+    <Compile Include="Controllers\UserAdminController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\ArtistsImg\Brian Knapp\Brian_headshot.jpg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\five.jpg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\four.jpg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\IMG_0037.jpeg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\IMG_0056.jpeg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\IMG_1176.jpeg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\IMG_1298.jpeg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\IMG_1546.jpeg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\IMG_2481.jpeg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\IMG_2535.jpeg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\one.jpg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\six.jpg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\three.jpg" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\two.jpg" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\celebrities.jpg" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\darrel Headshot.jpg" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\darrell_deahshot.jpg" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\grateful.jpg" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\Hero.jpg" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\smart.jpg" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\smile.jpg" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\soup.jpg" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\yes.jpg" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\yipee.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\eight.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\five.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\four.jpeg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\four.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\IMG_1456.jpeg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\IMG_4048.jpeg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\IMG_4049.jpeg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\joey.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\nine.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\one.jpeg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\one.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\Remnants of war.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\seven.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\six.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\three.jpeg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\three.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\two.jpeg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\two.jpg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\_MG_3660.jpeg" />
+    <Content Include="Content\ArtistsImg\Joey Williams\_MG_3676.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P1A_2fx4f.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P1_2fx4f.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P2_2fx2.5f.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P2_2fx2.5f.jpg" />
+    <Content Include="Content\ArtistsImg\Leah\P3_10ix20i.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P3_10ix20i.jpg" />
+    <Content Include="Content\ArtistsImg\Leah\P4_8ix10i.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P5_9ix12i.jpg" />
+    <Content Include="Content\ArtistsImg\Leah\P6_11ix14i.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P7_4ix5i.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P8_2fx2.5f.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P9A_2fx4f.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P9B_2fx4f.jpeg" />
+    <Content Include="Content\ArtistsImg\Leah\P9_2fx4f.jpg" />
+    <Content Include="Content\ArtistsImg\Micael Dobrinoff\20140720_070455.jpeg" />
+    <Content Include="Content\ArtistsImg\Micael Dobrinoff\20140722_161130.jpeg" />
+    <Content Include="Content\ArtistsImg\Micael Dobrinoff\20140724_072957.jpeg" />
+    <Content Include="Content\ArtistsImg\Micael Dobrinoff\20140725_112421.jpeg" />
+    <Content Include="Content\ArtistsImg\Micael Dobrinoff\20140728_123346.jpeg" />
+    <Content Include="Content\ArtistsImg\Micael Dobrinoff\20140729_151719.jpeg" />
+    <Content Include="Content\ArtistsImg\Micael Dobrinoff\20140812_111930.jpeg" />
+    <Content Include="Content\ArtistsImg\Micael Dobrinoff\20140813_165053.jpeg" />
+    <Content Include="Content\ArtistsImg\Micael Dobrinoff\20140815_152243.jpeg" />
+    <Content Include="Content\ArtistsImg\Micael Dobrinoff\20140817_122251.jpeg" />
+    <Content Include="Content\ArtistsImg\William Baumgarten\EVAC1.jpg" />
+    <Content Include="Content\ArtistsImg\William Baumgarten\EVAC2.jpg" />
+    <Content Include="Content\ArtistsImg\William Baumgarten\EVAC3.jpg" />
+    <Content Include="Content\ArtistsImg\William Baumgarten\EVAC4.jpg" />
+    <Content Include="Content\ArtistsImg\William Baumgarten\EVAC5.JPG" />
+    <Content Include="Content\ArtistsImg\William Baumgarten\EVAC6.jpg" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Colors\color_10.css" />
+    <Content Include="Content\Colors\color_11.css" />
+    <Content Include="Content\Colors\color_3.css" />
+    <Content Include="Content\Colors\color_0.css" />
+    <Content Include="Content\Colors\color_1.css" />
+    <Content Include="Content\Colors\color_2.css" />
+    <Content Include="Content\Colors\color_4.css" />
+    <Content Include="Content\Colors\color_5.css" />
+    <Content Include="Content\Colors\color_6.css" />
+    <Content Include="Content\Colors\color_7.css" />
+    <Content Include="Content\Colors\color_8.css" />
+    <Content Include="Content\Colors\color_9.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Images\EmpImages\NoImage.png" />
+    <Content Include="Content\Images\img\artists\brian_headshot.jpg" />
+    <Content Include="Content\Images\img\artists\darrell_headshot.jpg" />
+    <Content Include="Content\Images\img\artists\fusaro\celebrities.jpg" />
+    <Content Include="Content\Images\img\artists\fusaro\darrell_headshot.jpg" />
+    <Content Include="Content\Images\img\artists\fusaro\grateful.jpg" />
+    <Content Include="Content\Images\img\artists\fusaro\Hero.jpg" />
+    <Content Include="Content\Images\img\artists\fusaro\smart.jpg" />
+    <Content Include="Content\Images\img\artists\fusaro\smile.jpg" />
+    <Content Include="Content\Images\img\artists\fusaro\soup.jpg" />
+    <Content Include="Content\Images\img\artists\fusaro\yes.jpg" />
+    <Content Include="Content\Images\img\artists\fusaro\yipee.jpg" />
+    <Content Include="Content\Images\img\artists\joey_headshot.jpg" />
+    <Content Include="Content\Images\img\artists\knapp\brian_headshot.jpg" />
+    <Content Include="Content\Images\img\artists\knapp\five.jpg" />
+    <Content Include="Content\Images\img\artists\knapp\four.jpg" />
+    <Content Include="Content\Images\img\artists\knapp\one.jpg" />
+    <Content Include="Content\Images\img\artists\knapp\six.jpg" />
+    <Content Include="Content\Images\img\artists\knapp\three.jpg" />
+    <Content Include="Content\Images\img\artists\knapp\two.jpg" />
+    <Content Include="Content\Images\img\artists\williams\eight.jpg" />
+    <Content Include="Content\Images\img\artists\williams\five.jpg" />
+    <Content Include="Content\Images\img\artists\williams\four.jpg" />
+    <Content Include="Content\Images\img\artists\williams\joey_headshot.jpg" />
+    <Content Include="Content\Images\img\artists\williams\nine.jpg" />
+    <Content Include="Content\Images\img\artists\williams\one.jpg" />
+    <Content Include="Content\Images\img\artists\williams\seven.jpg" />
+    <Content Include="Content\Images\img\artists\williams\six.jpg" />
+    <Content Include="Content\Images\img\artists\williams\three.jpg" />
+    <Content Include="Content\Images\img\artists\williams\two.jpg" />
+    <Content Include="Content\Images\img\artists\_MG_3676.jpeg" />
+    <Content Include="Content\Images\img\clogo1.png" />
+    <Content Include="Content\Images\img\clogo2.png" />
+    <Content Include="Content\Images\img\clogo3.png" />
+    <Content Include="Content\Images\img\clogo4.png" />
+    <Content Include="Content\Images\img\clogo5.png" />
+    <Content Include="Content\Images\img\clogo6.png" />
+    <Content Include="Content\Images\img\index.jpg" />
+    <Content Include="Content\Images\img\loader.gif" />
+    <Content Include="Content\Images\img\logo_0.png" />
+    <Content Include="Content\Images\img\logo_1.png" />
+    <Content Include="Content\Images\img\logo_10.png" />
+    <Content Include="Content\Images\img\logo_11.png" />
+    <Content Include="Content\Images\img\logo_2.png" />
+    <Content Include="Content\Images\img\logo_3.png" />
+    <Content Include="Content\Images\img\logo_4.png" />
+    <Content Include="Content\Images\img\logo_5.png" />
+    <Content Include="Content\Images\img\logo_6.png" />
+    <Content Include="Content\Images\img\logo_7.png" />
+    <Content Include="Content\Images\img\logo_8.png" />
+    <Content Include="Content\Images\img\logo_9.png" />
+    <Content Include="Content\Images\img\placeholder\1200x800.jpg" />
+    <Content Include="Content\Images\img\placeholder\500x500.gif" />
+    <Content Include="Content\Images\img\placeholder\600x900.gif" />
+    <Content Include="Content\Images\img\placeholder\evac_logo1.jpg" />
+    <Content Include="Content\Images\img\placeholder\evac_logo2.jpg" />
+    <Content Include="Content\Images\img\placeholder\parallax.jpg" />
+    <Content Include="Content\Images\img\placeholder\parallax.png" />
+    <Content Include="Content\Images\img\placeholder\parallax_three.jpg" />
+    <Content Include="Content\Images\img\placeholder\parallax_two.jpg" />
+    <Content Include="Content\Images\img\shield.jpg" />
+    <Content Include="Content\jquery.jgrowl.css" />
+    <Content Include="Content\ProductTools\Akzidenz-Grotesk_BQ_500-Akzidenz-Grotesk_BQ_500-Akzidenz-Grotesk_BQ_italic_700.font.js" />
+    <Content Include="Content\ProductTools\Akzidenz-Grotesk_BQ_500.font.js" />
+    <Content Include="Content\ProductTools\cufon-yui.js" />
+    <Content Include="Content\ProductTools\FontSoupGerman_700.font.js" />
+    <Content Include="Content\ProductTools\Gotham_Rounded_Medium_350.font.js" />
+    <Content Include="Content\ProductTools\jquery.min.js" />
+    <Content Include="Content\ProductTools\style.css" />
+    <Content Include="Content\ProgramImages\bg.gif" />
+    <Content Include="Content\ProgramImages\social.png" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="Scripts\jquery.carousello.js" />
+    <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\jquery.gmap.min.js" />
+    <Content Include="Scripts\jquery.isotope.js" />
+    <Content Include="Scripts\jquery.jgrowl.js" />
+    <Content Include="Scripts\jquery.magnific-popup.js" />
+    <Content Include="Scripts\jquery.parallax.js" />
+    <Content Include="Scripts\jquery.queryloader2.js" />
+    <Content Include="Scripts\mediaelement-and-player.js" />
+    <Content Include="Scripts\modernizr.js" />
+    <Content Include="Scripts\plugins.js" />
+    <Content Include="Scripts\responsive.js" />
+    <Content Include="Scripts\supersized.3.2.7.js" />
+    <Content Include="Scripts\supersized.shutter.js" />
+    <Content Include="Scripts\us.widgets.js" />
+    <Content Include="Scripts\waypoints.min.js" />
+    <Content Include="Content\magnific-popup.css" />
+    <Content Include="Content\motioncss-widgets.css" />
+    <Content Include="Content\motioncss.css" />
+    <Content Include="Content\responsive.css" />
+    <Content Include="Content\style copy.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\ArtistsImg\.DS_Store" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\.DS_Store" />
+    <Content Include="Content\ArtistsImg\Brian Knapp\Thumbs.db" />
+    <Content Include="Content\ArtistsImg\Darrell Fusaro\working images.psd" />
+    <Content Include="Content\ArtistsImg\Leah\.DS_Store" />
+    <Content Include="Content\Fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Fonts\FontAwesome.otf" />
+    <Content Include="Content\Images\img\.DS_Store" />
+    <Content Include="Content\Images\img\artists\.DS_Store" />
+    <Content Include="Content\Images\img\placeholder\.DS_Store" />
+    <Content Include="Content\Images\img\Thumbs.db" />
+    <Content Include="Content\ProductTools\.DS_Store" />
+    <Content Include="Content\ProgramImages\.DS_Store" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\UsersAdmin\Index.cshtml" />
+    <Content Include="Views\UsersAdmin\Edit.cshtml" />
+    <Content Include="Views\UsersAdmin\Details.cshtml" />
+    <Content Include="Views\UsersAdmin\Delete.cshtml" />
+    <Content Include="Views\UsersAdmin\Create.cshtml" />
+    <Content Include="Views\RolesAdmin\Index.cshtml" />
+    <Content Include="Views\RolesAdmin\Edit.cshtml" />
+    <Content Include="Views\RolesAdmin\Details.cshtml" />
+    <Content Include="Views\RolesAdmin\Delete.cshtml" />
+    <Content Include="Views\RolesAdmin\Create.cshtml" />
+    <Content Include="Views\Account\DisplayEmail.cshtml" />
+    <Content Include="Views\EvacArtists\Index.cshtml" />
+    <Content Include="Views\EvacArtists\Create.cshtml" />
+    <Content Include="Views\EvacArtists\Edit.cshtml" />
+    <Content Include="Views\EvacArtists\Details.cshtml" />
+    <Content Include="Views\EvacArtists\Delete.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Staff\Index.cshtml" />
+    <Content Include="Views\Staff\Create.cshtml" />
+    <Content Include="Views\Staff\Delete.cshtml" />
+    <Content Include="Views\Staff\Details.cshtml" />
+    <Content Include="Views\Staff\Edit.cshtml" />
+    <Content Include="Views\Gallery\Create.cshtml" />
+    <Content Include="Views\Gallery\Delete.cshtml" />
+    <Content Include="Views\Gallery\Edit.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\Gallery\Details.cshtml" />
+    <Content Include="Views\Events\Details.cshtml" />
+    <Content Include="Views\Events\Create.cshtml" />
+    <Content Include="Views\Events\Delete.cshtml" />
+    <Content Include="Views\Events\Edit.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\EventImg\" />
+    <Folder Include="Content\StaffImg\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EVACart.Data.EF\EVACart.Data.EF.csproj">
+      <Project>{9652d048-62fe-474c-b95b-508f1e43da13}</Project>
+      <Name>EVACart.Data.EF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51787</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51787/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

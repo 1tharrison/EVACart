@@ -1,0 +1,107 @@
+﻿
+
+@model IEnumerable<EVACart.Data.EF.Staff>
+@{
+    ViewBag.Title = "Index";
+}
+
+<br /><br /><br />
+
+<div>
+    <h4>EvacArtist</h4>
+    <hr />
+    @if (User.IsInRole("Admin"))
+    {
+        @Html.ActionLink("Add a New Artist", "Create")
+    } <p>
+
+    </p>
+    @foreach (var item in Model)
+    {
+        <div class="l-subsection">
+            <div class="l-subsection-h">
+                <div class="l-subsection-hh g-html i-cf">
+
+                    <div class="w-form contacts_form text-danger">
+                        <div class="w-form-h contacts_form_form text-danger" style="color:black">
+
+
+                            @if (item.IsActive == true)
+                            {
+                                <strong>
+                                    @Html.DisplayFor(modelItem => item.FirstName, item.LastName)
+                                </strong>
+                            }
+
+                            @if (item.IsActive == false)
+                            {
+                                <strong style="color:red">
+                                    @Html.DisplayFor(modelItem => item.FirstName, item.LastName)
+                                </strong>
+                            }
+                            <br />
+                            <section id="team" class="l-section">
+
+                                <div class="l-subsection">
+                                    <div class="l-subsection-h">
+                                        <div class="l-subsection-hh g-html i-cf">
+
+
+                                            <h2 class="highlight"><strong>EVAC's Staff Artists</strong></h2>
+
+                                           <div class="g-hr type_invisible"></div>
+
+                                            <div class="w-team">
+                                                <div class="w-team-h">
+                                                    <div class="w-team-list">
+
+                                                        <a href='@Url.Action("gallery_one", "Home")'>
+                                                            <div class="w-team-member">
+                                                                <div class="w-team-member-h">
+                                                                    <div class="w-team-member-image">
+                                                                        <img src="@Url.Content("~/Content/StaffImg/"+ item.Image)" alt="@Url.Content("~/Content/Images/EmpImages/NoImage.png")" />
+                                                                    </div>
+                                                                    <div class="w-team-member-meta">
+                                                                        <div class="w-team-member-meta-h">
+                                                                            <h4 class="w-team-member-name">@Html.DisplayFor(modelItem => item.FirstName, item.LastName)</h4>
+                                                                            <div class="w-team-member-role">@Html.DisplayFor(modelItem => item.Department.Name)</div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+
+
+
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+
+
+
+                            <div class="buttons" style="margin-left:45px">
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.StaffID }) @:|
+                                    @Html.ActionLink("Details", "Details", new { id = item.StaffID })@:|
+                                    @Html.ActionLink("Change Status", "Delete", new { id = item.StaffID })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    }
+</div>

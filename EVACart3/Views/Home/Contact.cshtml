@@ -1,0 +1,86 @@
+﻿@model EVACart.Models.ContactViewModel
+@{
+    ViewBag.Title = "Contact";
+}
+
+<!-- page: CONTACT -->
+<section id="contact" class="l-section">
+
+    <div class="l-subsection color_dark parallax_two">
+        @*style="background-image:url(~/Content/Images/placeholder/.jpg);*@"
+        <div class="l-subsection-h">
+            <div class="l-subsection-hh g-html i-cf">
+
+                <h2><strong>Sponsorship Opportunities Available</strong></h2>
+                <h4>There are many opportunities to show your support for veterans and local artists. Through our sponsorships opportunities you will endow our artists to create their masterpieces, showcase their work, and help build a better community through the arts. These opportunities include:</h4>
+                <h6>
+                    <b>Individual Artist sponsorship – </b> Endow a veteran or local artist the ability to create artwork through specialized individual grants for purchase of necessary materials, tools, and equipment to make art.<br><br>
+                    <b>Gallery Sponsorship – </b> Endow a veteran or local artist the ability to showcase artwork through our physical galleries. By sponsoring a show you will help offset the cost necessary to showcase their work and provide an opportunity that may have not been accessible to them because of financial hardship. This event will be held in your name and you will also receive a selected piece from the artist.<br><br><b>General sponsorship – </b> Endow EVAC’s ability to provide more opportunities and advocation for veteran and local artist. This includes online galleries, art fairs, special events and fundraisers.
+                </h6>
+
+                <h4>For further information on how to be a sponsor please contact Joe Williams at:</h4>
+
+                <div class="w-contacts">
+                    <div class="w-contacts-h">
+                        <div class="w-contacts-list">
+                            <div class="w-contacts-item">
+                                <i class="fa-phone"></i>
+                                <span class="w-contacts-item-value">(816) 810-1680</span>
+                            </div>
+                            <br>
+
+                            <div class="w-contacts-item">
+                                <i class="fa-envelope-o"></i>
+                                <span class="w-contacts-item-value"><a href="http://www.info@evacart.com">joe@evacart.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="l-subsection">
+        <div class="l-subsection-h">
+            <div class="l-subsection-hh g-html i-cf">
+
+                <h4 class="highlight"><strong>Subscribe to our Newsletter!</strong></h4>
+
+                <p class="size_big">Get the latest Evac News straight to your inbox</p>
+                @using (Html.BeginForm())
+                {
+                    <div class="w-form contacts_form text-danger">
+                        <div class="w-form-h contacts_form_form text-danger">
+                            @*<form class="g-form" action="#" method="post" id="contact_form">*@
+                            <div class="g-form-row" id="name_row">
+                                @Html.TextBoxFor(model => model.Name, "", new { @class = "form-control", @placeholder = "Name" })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div><div class="form-group">
+                                @Html.TextBoxFor(model => model.Email, "", new { @class = "form-control", @placeholder = "Email" })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div><br /><div class="form-group">
+                                @Html.TextBoxFor(model => model.Subject, "", new { @class = "form-control", @placeholder = "Subject" })
+                                @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                            </div><br /><div class="form-group">
+                                @Html.TextAreaFor(model => model.Message, new { @class = "form-control", @placeholder = "Message" })
+                                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                            </div>
+                            <br />
+                            <div class="clearfix"> </div>
+
+                            <div class="g-form-row">
+                                <div class="g-form-row-label"></div>
+                                <div class="g-form-row-field">
+                                    <button class="g-btn type_primary" type="submit"><span>Send Message</span></button>
+                                </div>
+                            </div>
+                            @*</form>*@
+                        </div>
+                    </div>}
+
+            </div>
+        </div>
+    </div>
+
+</section>
